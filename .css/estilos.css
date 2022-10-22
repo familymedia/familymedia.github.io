@@ -5,7 +5,9 @@
 
 body{
 	overflow-x: hidden;
+    width: 100%;
  }
+
 
 * {
 	margin: 0;
@@ -27,6 +29,10 @@ header {
 	padding: 10px 0;
 }
 
+.headerprincipal {
+	padding: 0px 0;
+	width: 120px;
+}
 header .contenedor {
 	display: flex;
 	justify-content: space-between;
@@ -163,17 +169,17 @@ header nav a.activo {
 .thumbTitle2 {
 	font-family: montserrat;
     font-size: 25px;
-    line-height: 40px;
     font-weight: 600;
-    margin: 0 0% 0px;
+	margin-left: 3%;
     color: rgb(255, 255, 255);
 }
 .thumbTitle2_desc {
 	font-family: montserrat;
     font-size: 17px;
     line-height: 30px;
+	margin-left: 3%;
     font-weight: 400;
-    margin: 0 0% 0px;
+
     color: rgb(255, 255, 255);
 }
 
@@ -181,6 +187,7 @@ header nav a.activo {
     padding: 0 4%;
 	position: relative;
 }
+
 
 .thumbTile {
     width: 20%;
