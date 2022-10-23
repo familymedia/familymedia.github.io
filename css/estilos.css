@@ -40,8 +40,8 @@ header .contenedor {
 }
 
 .logotipo {
-align-items: center;
-
+	display:block;
+	margin:auto;
 }
 
 header nav a {
@@ -61,9 +61,9 @@ header nav a.activo {
 }
 .pelicula-principal {
 	font-size: 16px;
-	min-height: 29.62em;
+	min-height: 30em;
 	color: #fff;
-	background: linear-gradient(#0d0d0d59 0%, #0d0d0d 100%), url(../img/JOCSESTIUFOTO.png);
+	background: linear-gradient(#0d0d0d00 0%, #0d0d0d 100%), url(../img/EPSON006\ -\ copia.jpg);
 	background-position: center center;
 	background-size: cover;
 	margin-bottom: 0;
@@ -78,6 +78,15 @@ header nav a.activo {
 	width: 100%;
 	z-index:10000;
 	bottom: 0;
+}
+
+.degradadologo {
+	background: linear-gradient(#000000c7 10%, #0c0c0c00 100%);
+	position:fixed;
+	height: 8%;
+	width: 100%;
+	z-index:10000;
+	top: 0;
 }
 
 .pelicula-principal .contenedor {
@@ -229,7 +238,7 @@ header nav a.activo {
 
 .thumbTiles .swiper-button-prev,
 .thumbTiles .swiper-button-next {
-    height: 27%; 
+    height: 35%; 
     width: 7%;
     width: calc(4% - 5px);
 	background-color: rgba(20, 20, 20, 0);
