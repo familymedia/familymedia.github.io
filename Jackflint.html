@@ -29,6 +29,15 @@
 	</head>
 <body>
 
+	<div class="loader" id="carga"></div>
+	<script>window.onload=function(){
+	var loader = document.getElementById("carga");
+
+	loader.style.visibility='hidden';
+	loader.style.opacity='0';
+	}
+	</script>
+
 	<main>
 		<div class="degradadoinferior">
 			<div class="contenedor">
@@ -57,7 +66,7 @@
 			background-position: center center; background-size: cover; " class="pelicula-principal">
 			<div class="contenedor">
 				<img style="margin-top: 40px;" class="headerprincipal" src="img/orionstudios_web_00000.png">
-				<h3 class="titulo">Jack Flint</h3>
+				<br><img class="logopresentacion" src="img/portada web jack flint_00000.png">
 				<p class="descripcion">
 					Un xiquet que es diu Jack Flint es telestransporta per art de màgia a un lloc desconegut on <br>acompanyat d'una altra xiqueta tindrà que buscar com tornar a la seua casa				</p>
 				<div style="float: left" class="contenedorHD" >

@@ -30,6 +30,16 @@
 	</head>
 <body>
 
+	<div class="loader" id="carga"></div>
+	<script> src="https://code.jquery.com/jquery-3.6.1.min.js"</script>
+	<script>window.onload=function(){
+	var loader = document.getElementById("carga");
+
+	loader.style.visibility='hidden';
+	loader.style.opacity='0';
+	}
+	</script>
+
 	<main>
 		<div class="degradadoinferior">
 			<div class="contenedor">
@@ -57,11 +67,10 @@
 		<div style="background: linear-gradient(#0d0d0d00 0%, #0d0d0d 100%), url(img/happyday_princ.png);
 			background-position: center center; background-size: cover; " class="pelicula-principal">
 			<div class="contenedor">
-				<img style="margin-top: 40px;" class="headerprincipal" src="img/tvf web_00000.png">
-				<h3 class="titulo">Happy Day</h3>
+				<img style="margin-top: 40px; text-align: left;" class="headerprincipal" src="img/tvf web_00000.png">
+				<br><img class="logopresentacion" src="img/portada web happyday_00000.png">
 				<p class="descripcion">
-					Aquest es el programa presentat per Pau en el que veuràs de tot, desde balls fins a entrevistes.
-				</p>
+					Aquest és el programa presentat per Pau en el que veuràs de tot, des de balls fins a entrevistes.</p>
 				<div style="float: left" class="contenedorHD" >
 					<p >HD</p>
 				</div>
