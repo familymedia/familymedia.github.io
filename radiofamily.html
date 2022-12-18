@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<html translate="no">
+	<meta name="google" content="notranslate">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link rel="stylesheet" href="radiofamily.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+	<title>FamilyMax</title>
+	<STYLE>A {text-decoration: none;} </STYLE>
+<link rel="icon" href="img/family-max-4_00000.ico">
+
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<style>	@import url('https://fonts.googleapis.com/css2? familia=Montserrat:wght@600;700&display=swap');
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+	
+<body>
+
+	<div class="aaa" id="fond"></div>
+
+	<div class="loader" id="carga"></div>
+	<script>window.onload=function(){
+	var loader = document.getElementById("carga");
+
+	loader.style.visibility='hidden';
+	loader.style.opacity='0';
+	}
+
+	
+	</script>
+
+<main>
+	<div class="degradadoinferior">
+		<div class="contenedor">
+			<h3 class="titulo"></h3>
+			<p class="descripcion">
+			
+			</p>
+		</div>
+	</div>
+</main>
+
+
+<main>
+	<div class="degradadologo">
+		<div class="contenedor">
+			<h3 class="titulo"></h3>
+			<p class="descripcion">
+				<a href="index.html"> <img src="img/family max web_00000.png"  alt="familymèdia" width="101"></a>
+
+			</p>
+		</div>
+	</div>
+
+	<header>
+		<div class="contenedornav">
+
+			<nav>
+				<a href="index.html">Inici</a>
+				<a href="#">Programes</a>
+				<a href="#">Originals</a>
+				<a href="radiofamily.html" class="activo">Radio</a>
+				
+			</nav>
+		</div>
+	</header>
+	
+</main>
+
+
+	<audio id="my-audio-1" src="https://stream.zeno.fm/g36pbfmaewduv"></audio>
+	<audio id="my-audio-2" src="https://stream.zeno.fm/dfrplsw5xpzvv"></audio>
+	<audio id="my-audio-3" src="https://stream.zeno.fm/gzjdpqzocn3vv"></audio>
+	<audio id="my-audio-4" src="https://stream.zeno.fm/qu0qppcfmqduv"></audio>
+	<audio id="my-audio-5" src="https://stream.zeno.fm/lej5jcocfi8vv"></audio>
+
+<main>
+
+	<div class="square1" id="fade1"></div>
+	<div class="square2" id="fade2"></div>
+	<div class="square3" id="fade3"></div>
+	<div class="square4" id="fade4"></div>
+	<div class="square5" id="fade5"></div>
+
+	<section class="thumbSection">
+	  <h4 class="thumbTitle">Radios</h4>
+	  <div class="thumbTiles swiper-container">
+		<!-- Additional required wrapper -->
+		<div class="swiper-wrapper">
+		  <!-- Slides -->
+
+		  <div class="swiper-slide">
+			<a class="thumbTile">
+				<img class="circular--landscape" id="RF1" src="img/rf 1 cuad_00000.png" onclick="document.getElementById('fade1').classList.toggle('hide')">
+			</a>
+		  </div>
+
+		  <div class="swiper-slide">
+			<a class="thumbTile">
+				<img class="circular--landscape"id="RF2" src="img/rf 2 cuad_00000.png" onclick="document.getElementById('fade2').classList.toggle('hide')">
+			</a>
+		  </div>
+
+		  
+		  <div class="swiper-slide">
+			<a class="thumbTile">
+				<img class="circular--landscape"id="RF3" src="img/rf 3 cuad_00000.png" onclick="document.getElementById('fade3').classList.toggle('hide'),togglePlay(3)">
+			</a>
+		  </div>
+
+		  <div class="swiper-slide">
+			<a class="thumbTile">
+				<img class="circular--landscape"id="RF4" src="img/rf 4 cuad_00000.png" onclick="document.getElementById('fade4').classList.toggle('hide'),togglePlay(4)">
+			</a>
+		  </div>
+		  
+		  <div class="swiper-slide">
+			<a class="thumbTile">
+				<img class="circular--landscape"id="RF5" src="img/rf 1 x_00000.png" onclick="document.getElementById('fade5').classList.toggle('hide'),togglePlay(5)">
+			</a>
+		  </div>
+
+		  <div class="swiper-slide">
+			<a class="thumbTile">
+				<img>
+			</a>
+		  </div>
+
+		</div>
+	  </div>
+	</section>
+
+</main>
+
+
+<!-- HTML para mostrar la barra deslizante -->
+<input type="range" min="0" max="100" value="50" id="volume-control" />
+
+
+
+<p class="piedepagina">	
+	<br style="clear:both;"/>
+	<img style="width: 130px;" src="img/famed_white.png" alt="">
+	<br style="clear:both;"/>
+	<br style="clear:both;"/>
+	<br style="clear:both;"/>
+	</p>
+	<script>
+		var mySwiper = new Swiper('.swiper-container', {
+		  // Optional parameters
+		  spaceBetween: 50,
+		  slidesPerView: 2,
+		  loop: false,
+		  freeMode: true,
+		  loopAdditionalSlides: 5,
+		  speed: 500,
+		  // Navigation arrows
+		  navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		  },
+		  breakpoints: {
+			// when window width is >= 640px
+			640: {
+				spaceBetween: 5,
+			  slidesPerView: 5,
+			  slidesPerGroup: 5,
+			  freeMode: false
+			}
+		  }
+		})
+	
+	
+	</script>
+
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,670 @@
+:root {
+	--rojo: #ffffff00;
+	--fondo: #0c0c0c;
+}
+
+body{
+	overflow-x: hidden;
+    width: 100%;
+ }
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+
+
+.contenedornav {
+	width: 97%;
+	margin: auto;
+	color: #d2d2d2;
+	text-align: right;
+	z-index: 10001 ;
+	position:fixed;
+	padding-top: 15px;
+}
+
+header {
+	padding: 0px 0;
+}
+
+.headerprincipal {
+	padding: 0px 0;
+	height: 40px;
+	object-fit: contain;
+
+}
+header .contenedor {
+
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logotipo {
+	display:block;
+	margin:auto;
+}
+
+header nav a {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	margin-right: 20px;
+	transition: 0.4s ease-in-out;
+	font-size: 15px;
+
+}
+
+button a {
+	color: rgb(0, 0, 0);
+}
+
+button a:hover {
+	color: rgb(0, 0, 0);
+}
+
+header nav a.activo {
+	color: rgb(255, 255, 255);
+	font-weight: 800;
+
+}
+
+header nav a:hover {
+	color: rgba(255, 255, 255, 0.507);
+}
+
+/* ---- ----- ----- Pelicula Principal ----- ----- ----- */
+.logo-familymax {
+	padding: 10px 0;
+}
+.pelicula-principal {
+	font-size: 16px;
+	min-height: 30em;
+	color: #fff;
+	background: linear-gradient(#0d0d0d00 0%, #0d0d0d 100%), url(img/fondonegro_00000.png);
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 0;
+	display: flex;
+	align-items: end;
+}
+
+.degradadoinferior {
+	background: linear-gradient(#00000000 0%, #000000 100%);
+	position:fixed;
+	height: 10%;
+	width: 100%;
+	z-index:1;
+	bottom: 0;
+}
+
+.degradadologo {
+	background: linear-gradient(#000000c7 10%, #0c0c0c00 100%);
+	position:fixed;
+	height: 8%;
+	width: 100%;
+	z-index:10000;
+	top: 0;
+}
+
+.logopresentacion {
+
+	margin: 10px 0px;
+	height: 150px;
+	
+}
+
+.pelicula-principal .contenedor {
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 3.25em;
+	
+}
+
+.pelicula-principal .titulo {
+	font-weight: 600;
+	font-size: 3.12em;
+	margin-bottom: 0.4em;
+}
+
+.pelicula-principal .descripcion {
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.75em;
+	max-width: 50%;
+	margin-bottom: 1.25em;
+}
+
+.pelicula-principal .boton {
+	background: rgb(255, 255, 255) ;
+	border: none;
+	border-radius: 20px;
+	padding: 7px 17px;
+	color: rgb(0, 0, 0);
+	margin-right: 0.5em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 1em;
+	margin-bottom:1.25em ;
+	font-weight: 600;
+
+	
+}
+.botoninicio {
+	background: rgb(255, 255, 255) ;
+	border: 0;
+	border-radius: 20px;
+	padding: 7px 17px;
+	margin-right: 0.5em;
+	cursor: pointer;
+	transition:.3s ease-in;
+	font-size: 1em;
+	margin-bottom:1.25em ;
+	font-weight: 600;
+
+	
+}
+
+.botoninicio:hover {
+	background:  rgba(255, 255, 255, 0.689);
+	color:#FFF;
+
+
+	
+}
+
+.pelicula-principal .boton2 {
+	border-style: solid;
+	background: rgba(255, 255, 255, 0);
+	border-color: rgba(255, 255, 255, 0);
+	border-radius: 0em;
+	margin-right: 0em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 1.12em;
+	margin-bottom:1.25em ;
+	
+}
+
+.pelicula-principal .boton:hover {
+	background: rgba(255, 255, 255, 0.747);
+	color: rgb(0, 0, 0);
+
+}
+
+.pelicula-principal .boton2:hover {
+	transform: scale(1.1);
+}
+
+.pelicula-principal .boton i {
+	margin-right: 0.7em;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 600px) {
+	header .logotipo {
+		margin-bottom: 10px;
+	
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pelicula-principal {
+		font-size: 14px;
+		text-align: center;
+	}
+
+	.pelicula-principal .descripcion {
+		max-width: 100%;
+	}
+	
+}
+
+
+
+/* ---- ----- ----- desplazamientos ----- ----- ----- */
+
+:root {
+    --tileBorderRadius: 7px;
+}
+.thumbSection {
+    padding-top: 3%;
+    color: var(--colorWhite);
+}
+
+.thumbTitle {
+	font-family: Helvetica,Arial, sans-serif;
+    font-size: 18px;
+    line-height: 14px;
+    font-weight: 500;
+    margin: 0 4% 12px;
+    color: rgb(255, 255, 255);
+}
+
+.thumbTitlenum {
+	font-family: Helvetica,Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+	margin-left: 0%;
+    color: rgb(109, 109, 109);
+}
+
+.thumbTitle2 {
+	font-family: Helvetica,Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+	margin-left: 0%;
+    color: rgb(255, 255, 255);
+}
+.thumbTitle2_desc {
+	font-family: Helvetica,Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #d2d2d2;
+}
+.thumbTitle2_desc:hover {
+	font-family: Helvetica,Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #d2d2d2;
+}
+
+.thumbTiles.swiper-container {
+    padding: 0 0%;
+	margin: 0 20px;
+	position: relative;
+}
+
+
+.thumbTile {
+    width: 20%;
+}
+
+.thumbTile__image {
+    width: 100%;
+    border-radius: var(--tileBorderRadius);
+}
+
+.thumbTile__image:hover {
+	margin: 40xp 40px;
+	transform: scale(0.9);
+	transition: 250ms all;
+}
+
+
+.thumbTile__image_desc {
+	transform: scale(0.9);
+    width: 250px;
+    border-radius: var(--tileBorderRadius);
+	float: left;
+	z-index: 1;
+}
+
+.thumbTile__image_desc:hover {
+	margin: 40xp 40px;
+	transform: scale(0.8);
+	transition: 250ms all;
+	opacity: 50%;
+	
+}
+
+
+
+.thumbTile__image {
+	position: relative;
+	transition: 250ms all;
+	border-radius: var(--tileBorderRadius);
+  }
+
+  .thumbTile__image_desc {
+	position: relative;
+	transition: 250ms all;
+	border-radius: var(--tileBorderRadius);
+  }
+
+.thumbTiles .swiper-button-prev,
+.thumbTiles .swiper-button-next {
+    height: 35%; 
+    width: 7%;
+    width: calc(4% - 5px);
+	background-color: rgba(20, 20, 20, 0);
+
+}
+
+
+.thumbTiles .swiper-button-prev {
+    left: 0;
+    border-top-right-radius: var(--tileBorderRadius);
+    border-bottom-right-radius: var(--tileBorderRadius);
+}
+
+.thumbTiles .swiper-button-next {
+    right: 0;
+    border-top-left-radius: var(--tileBorderRadius);
+    border-bottom-left-radius: var(--tileBorderRadius);
+}
+
+.thumbTiles .swiper-button-prev::after,
+.thumbTiles .swiper-button-next::after {
+    color: #fff;
+    font-size: 4vw;
+    font-weight: bold;
+    transition: transform 0.1s ease-out;
+	
+}
+
+
+@media screen and (min-width: 640px) {
+    .thumbTiles .swiper-button-prev::after,
+    .thumbTiles .swiper-button-next::after {
+        display: none;
+        font-size: 2.4vw;
+    }
+
+    .thumbTiles .swiper-button-prev:hover::after,
+    .thumbTiles .swiper-button-next:hover::after {
+        transform: scale(1.25);
+    }
+
+    .thumbTiles:hover .swiper-button-prev::after,
+    .thumbTiles:hover .swiper-button-next::after {
+        display: block;
+    }
+
+
+}
+
+@media screen and (max-width: 640px) {
+    .thumbTiles .swiper-button-prev::after,
+    .thumbTiles .swiper-button-next::after {
+opacity: 0%;
+    }
+	.thumbTitle {
+		font-size: 18px;
+		line-height: 14px;
+		font-weight: 500;
+		margin: 6% 4% 12px;
+	}
+
+}
+
+.piedepagina {
+	font-family: montserrat;
+    font-size: 15px;
+    line-height: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: rgb(61, 61, 61);
+}
+
+.contenedorHD {
+	background-color: rgba(0, 119, 255, 0);
+	font-family: montserrat;
+	height: 27px;
+	width: 37px;
+	border-radius: 5px;
+	text-align: center;
+	border: 2px solid rgb(172, 172, 172);
+	font-size: 15px;
+    font-weight: 450;
+	}
+.contEdad{
+	margin-left: 10px;
+	background-color: rgba(0, 119, 255, 0);
+	font-family: montserrat;
+	height: 27px;
+	width: 37px;
+	border-radius: 5px;
+	text-align: center;
+	border: 2px solid rgba(172, 172, 172, 0);
+	font-size: 15px;
+    font-weight: 450;
+}
+
+.contAño{
+	margin-left: 10px;
+	background-color: rgba(0, 119, 255, 0);
+	font-family: montserrat;
+	height: 27px;
+	width: 47px;
+	border-radius: 5px;
+	text-align: center;
+	border: 2px solid rgba(172, 172, 172, 0);
+	font-size: 15px;
+    font-weight: 450;
+}
+
+@media screen and (max-width: 640px) {
+    .thumbTile__image_desc {
+	width: 40%;
+
+    }
+
+	.thumbTitle2 {
+		vertical-align: text-top;
+		font-size: 15px;
+		margin-left: 3%;
+		display: flex;
+	}
+
+	.thumbTitle2_desc {
+		font-size: 10px;
+		margin-left: 3%;
+		margin-top: 1%;
+		display: flex;
+		font-weight: 300;
+		line-height: 13px;
+	}
+
+	.thumbTitle2_desc:hover {
+		font-family: Helvetica;
+		font-size: 10px;
+		line-height: 13px;
+		font-weight: 100;
+	}
+
+
+	  
+	  
+}
+
+.flex-container {
+	display: flex ; flex-direction: column;
+	align-items: normal;
+	margin-left: 10px;
+	background: #151517; border-radius: 20px; margin: 20px; height: auto;  justify-content: left; width: 90%; margin-inline: auto;
+  }
+  
+
+--------------------
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+
+  .loader {
+display: flex;
+background-color: var(--fondo);
+
+height: 100%;
+justify-content: center;
+align-items: center;
+z-index: 100000;
+position: fixed;
+width: 100%;
+transition: 0.5s ease-in-out;
+  }
+
+  .loader2 {	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	display: inline-block;
+	position: relative;
+	background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 33%, #ffffff 100%);
+	box-sizing: border-box;
+	animation: rotation 1s linear infinite;
+	
+  }
+  .loader2::after {
+	content: '';  
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background: rgb(32, 32, 32)
+  }
+  @keyframes rotation {
+	0% { transform: rotate(0deg) }
+	100% { transform: rotate(360deg)}
+  } 
+
+  .audiocontrol {
+	width: 7%;
+	background-color: #000000;
+  }
+
+  
+
+
+
+
+
+.circular--landscape {
+    margin-left: 50px;
+	margin-right: 50px;
+    scale: 0.8;
+    text-align: right;
+    transition: 0.2s ease-in-out;
+    display: inline-block; position: relative; width: 200px; height: 200px; overflow: hidden; border-radius: 50%; } .circular--landscape img { width: auto; height: 100%; margin-left: -50px; }
+
+.circular--landscape:hover{
+    scale: 0.75;
+    background-color: black;
+    opacity: 70%;
+}
+
+.centrarradios {
+	width: 90%;
+	height: 20%;
+    display: block;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	flex-wrap: wrap
+  }
+
+  /* CSS para estilizar la barra deslizante */
+#volume-control {
+  width: 20%;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+  .square1 {
+	background: radial-gradient(circle, #00a2ff, #00a2ff46);
+	position:fixed;
+	height: 100vh;
+	justify-content: top;
+	align-items: top;
+	position: fixed;
+	width: 100%;
+	z-index: -1;
+  }
+
+  #fade1 { 	opacity: 0;
+			transition: opacity 1s; }
+  #fade1.hide { opacity: 1; }
+
+  #fade2 { 	opacity: 0;
+	transition: opacity 1s; }
+#fade2.hide { opacity: 1; }
+
+#fade3 { 	opacity: 0;
+	transition: opacity 1s; }
+#fade3.hide { opacity: 1; }
+
+#fade4 { 	opacity: 0;
+	transition: opacity 1s; }
+#fade4.hide { opacity: 1; }
+
+#fade5 { 	opacity: 0;
+	transition: opacity 1s; }
+#fade5.hide { opacity: 1; }
+
+  
+  .square2 {
+	background: radial-gradient(circle, #00ff88, #00ff8850);
+	position:fixed;
+	height: 100vh;
+	justify-content: top;
+	align-items: top;
+	position: fixed;
+	width: 100%;
+	z-index: -1;
+  }
+  
+  .square3 {
+	background: radial-gradient(circle, #ff002b, #ff002b50);
+	position:fixed;
+	height: 100vh;
+	justify-content: top;
+	align-items: top;
+	position: fixed;
+	width: 100%;
+	z-index: -1;
+  }
+  
+  .square4 {
+	background: radial-gradient(circle, #ff9100, #ff910050);
+	position:fixed;
+	height: 100vh;
+	justify-content: top;
+	align-items: top;
+	position: fixed;
+	width: 100%;
+	z-index: -1;
+  }
+  
+  .square5 {
+	background:  linear-gradient(45deg, hsla(352, 96%, 45%, 1) 0%, hsla(352, 96%, 45%, 0) 70%),
+    linear-gradient(135deg, hsla(253, 95%, 42%, 1) 10%, hsla(253, 95%, 42%, 0) 80%),
+    linear-gradient(225deg, hsla(179, 91%, 45%, 1) 10%, hsla(179, 91%, 45%, 0) 80%),
+    linear-gradient(315deg, hsla(119, 96%, 49%, 1) 100%, hsla(119, 96%, 49%, 0) 70%);
+	position:fixed;
+	height: 100vh;
+	justify-content: top;
+	align-items: top;
+	position: fixed;
+	width: 100%;
+	z-index: -1;
+  }
+  
