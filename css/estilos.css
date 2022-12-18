@@ -25,8 +25,20 @@ body {
 	margin: auto;
 }
 
+
+
+.contenedornav {
+	width: 97%;
+	margin: auto;
+	color: #d2d2d2;
+	text-align: right;
+	z-index: 10001 ;
+	position:fixed;
+	padding-top: 15px;
+}
+
 header {
-	padding: 10px 0;
+	padding: 0px 0;
 }
 
 .headerprincipal {
@@ -36,7 +48,7 @@ header {
 
 }
 header .contenedor {
-	display: flex;
+
 	justify-content: space-between;
 	align-items: center;
 }
@@ -47,14 +59,30 @@ header .contenedor {
 }
 
 header nav a {
-	color: rgb(131, 131, 131);
+	color: rgb(255, 255, 255);
 	text-decoration: none;
 	margin-right: 20px;
+	transition: 0.4s ease-in-out;
+	font-size: 15px;
+
 }
 
-header nav a:hover,
+button a {
+	color: rgb(0, 0, 0);
+}
+
+button a:hover {
+	color: rgb(0, 0, 0);
+}
+
 header nav a.activo {
-	color: #FFF;
+	color: rgb(255, 255, 255);
+	font-weight: 800;
+
+}
+
+header nav a:hover {
+	color: rgba(255, 255, 255, 0.507);
 }
 
 /* ---- ----- ----- Pelicula Principal ----- ----- ----- */
@@ -78,7 +106,7 @@ header nav a.activo {
 	position:fixed;
 	height: 10%;
 	width: 100%;
-	z-index:10000;
+	z-index:1;
 	bottom: 0;
 }
 
@@ -515,4 +543,11 @@ transition: 0.5s ease-in-out;
 	100% { transform: rotate(360deg)}
   } 
 
+  .audiocontrol {
+	width: 7%;
+	background-color: #000000;
+  }
+
+
   
+
