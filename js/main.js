@@ -3,94 +3,49 @@ const volumeControl = document.getElementById("volume-control");
 
 // Escuchar los cambios en la barra deslizante y ajustar el volumen de cada audio en consecuencia
 volumeControl.addEventListener("input", () => {
-  document.getElementById("my-audio-1").volume = volumeControl.value / 100;
-  document.getElementById("my-audio-2").volume = volumeControl.value / 100;
-  document.getElementById("my-audio-3").volume = volumeControl.value / 100;
-  document.getElementById("my-audio-4").volume = volumeControl.value / 100;
-  document.getElementById("my-audio-5").volume = volumeControl.value / 100;
+  document.getElementById("audio1").volume = volumeControl.value / 100;
+  document.getElementById("audio2").volume = volumeControl.value / 100;
+  document.getElementById("audio3").volume = volumeControl.value / 100;
+  document.getElementById("audio4").volume = volumeControl.value / 100;
+  document.getElementById("audio5").volume = volumeControl.value / 100;
 });
 
- ///////////////////////
 
- function togglePlay(audioNumber) {
-  var audioElement = document.getElementById("my-audio-" + audioNumber);
-  if (audioElement.paused) {
-  audioElement.pause();
-    audioElement.play();
+var currentAudio;
+
+function playAudio(id) {
+  if (currentAudio && currentAudio.id === id) {
+    currentAudio.paused ? currentAudio.play() : currentAudio.pause();
   } else {
-    audioElement.pause();
+    stopAudio();
+    currentAudio = document.getElementById(id);
+    currentAudio.play();
   }
 }
 
- ///////////////////////
+function stopAudio() {
+  if (currentAudio) {
+    currentAudio.pause();
+  }
+}
 
- const audio1 = document.getElementById('my-audio-1');
- const audio2 = document.getElementById('my-audio-2');
- const audio3 = document.getElementById('my-audio-3');
- const audio4 = document.getElementById('my-audio-4');
- const audio5 = document.getElementById('my-audio-5');
- 
- document.getElementById('RF1').addEventListener('click', function() {
+// Declarar una variable global para almacenar la última imagen seleccionada
+var lastSelectedImage = null;
 
-   audio2.pause();
-   audio3.pause();
-   audio4.pause();
-   audio5.pause();
-   audio1.play();
-   document.getElementById('RF1').addEventListener('click', () => {
-    audio1.pause();
-  });
-  reset
- });
- 
- document.getElementById('RF2').addEventListener('click', function() {
-
-  audio1.pause();
-  audio3.pause();
-  audio4.pause();
-  audio5.pause();
-  audio2.play();
-  document.getElementById('RF2').addEventListener('click', () => {
-    audio2.pause();
-    audio2.play();
-  });
- });
-
- document.getElementById('RF3').addEventListener('click', function() {
-
-  audio2.pause();
-  audio5.pause();
-  audio4.pause();
-  audio1.pause();
-  audio3.play();
-  document.getElementById('RF3').addEventListener('click', () => {
-    audio3.pause();
-  });
-});
-
-document.getElementById('RF4').addEventListener('click', function() {
-
-  audio2.pause();
-  audio3.pause();
-  audio5.pause();
-  audio1.pause();
-  audio4.play();
-  document.getElementById('RF4').addEventListener('click', () => {
-    audio4.pause();
-  });
-});
-
-document.getElementById('RF5').addEventListener('click', function() {
-
-  audio2.pause();
-  audio3.pause();
-  audio4.pause();
-  audio1.pause();
-  audio5.play();
-  document.getElementById('RF5').addEventListener('click', () => {
-    audio5.pause();
-  });
-});
- 
- 
-
+function makeSelectedImageBig(selectedImage) {
+  // Si la imagen ya está grande, hacerla pequeña
+  if (selectedImage.style.height === "300px", selectedImage.style.width = "300px") {
+    selectedImage.style.scale = "200px", selectedImage.style.width = "200px";
+  } else {
+    // Si hay una imagen seleccionada anteriormente, hacerla pequeña
+    if (lastSelectedImage) {
+      lastSelectedImage.style.height = "200px", selectedImage.style.width = "200px";
+    }
+    
+    // Hacer grande la imagen seleccionada actualmente
+    selectedImage.style.height = "300px", selectedImage.style.width = "300px";
+    
+    // Actualizar la última imagen seleccionada
+    lastSelectedImage = selectedImage;
+  }
+}
