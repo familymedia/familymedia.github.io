@@ -27,8 +27,6 @@
 	
 <body>
 
-	<div class="aaa" id="fond"></div>
-
 	<div class="loader" id="carga"></div>
 	<script>window.onload=function(){
 	var loader = document.getElementById("carga");
@@ -37,13 +35,14 @@
 	loader.style.opacity='0';
 	}
 
-	
 	</script>
 
 <main>
 	<div class="degradadoinferior">
 		<div class="contenedor">
-			<h3 class="titulo"></h3>
+
+			<input type="range" min="0" max="100" value="100" id="volume-control" />
+
 			<p class="descripcion">
 			
 			</p>
@@ -51,8 +50,7 @@
 	</div>
 </main>
 
-
-<main>
+	<main>
 	<div class="degradadologo">
 		<div class="contenedor">
 			<h3 class="titulo"></h3>
@@ -76,86 +74,96 @@
 		</div>
 	</header>
 	
-</main>
+	</main>
 
 
-	<audio id="my-audio-1" src="https://stream.zeno.fm/g36pbfmaewduv"></audio>
-	<audio id="my-audio-2" src="https://stream.zeno.fm/dfrplsw5xpzvv"></audio>
-	<audio id="my-audio-3" src="https://stream.zeno.fm/gzjdpqzocn3vv"></audio>
-	<audio id="my-audio-4" src="https://stream.zeno.fm/qu0qppcfmqduv"></audio>
-	<audio id="my-audio-5" src="https://stream.zeno.fm/lej5jcocfi8vv"></audio>
-
-<main>
+	<main>
 
 	<div class="square1" id="fade1"></div>
 	<div class="square2" id="fade2"></div>
 	<div class="square3" id="fade3"></div>
 	<div class="square4" id="fade4"></div>
 	<div class="square5" id="fade5"></div>
+ <br>
+ <br>
+ <br>
 
-	<section class="thumbSection">
-	  <h4 class="thumbTitle">Radios</h4>
-	  <div class="thumbTiles swiper-container">
-		<!-- Additional required wrapper -->
-		<div class="swiper-wrapper">
-		  <!-- Slides -->
+  <br>
+  <br>
+  <br>
+		<section class="thumbSection" >
+		<div class="thumbTiles swiper-container">
+			<!-- Additional required wrapper -->
+			<div class="swiper-wrapper">
+			<!-- Slides -->
 
-		  <div class="swiper-slide">
-			<a class="thumbTile">
-				<img class="circular--landscape" id="RF1" src="img/rf 1 cuad_00000.png" onclick="document.getElementById('fade1').classList.toggle('hide')">
-			</a>
-		  </div>
+			<div class="swiper-slide">
+				<a class="thumbTile">
+					<img class="circular--landscape" id="RF1" src="img/rf 1 cuad_00000.png" onclick="document.getElementById('fade1').classList.toggle('hide'),playAudio('audio1'),makeSelectedImageBig(this)">
+				</a>
+			</div>
 
-		  <div class="swiper-slide">
-			<a class="thumbTile">
-				<img class="circular--landscape"id="RF2" src="img/rf 2 cuad_00000.png" onclick="document.getElementById('fade2').classList.toggle('hide')">
-			</a>
-		  </div>
+			<div class="swiper-slide">
+				<a class="thumbTile">
+					<img class="circular--landscape"id="RF2" src="img/rf 2 cuad_00000.png" onclick="document.getElementById('fade2').classList.toggle('hide'),playAudio('audio2'),makeSelectedImageBig(this)">
+				</a>
+			</div>
 
-		  
-		  <div class="swiper-slide">
-			<a class="thumbTile">
-				<img class="circular--landscape"id="RF3" src="img/rf 3 cuad_00000.png" onclick="document.getElementById('fade3').classList.toggle('hide'),togglePlay(3)">
-			</a>
-		  </div>
+			
+			<div class="swiper-slide">
+				<a class="thumbTile">
+					<img class="circular--landscape"id="RF3" src="img/rf 3 cuad_00000.png" onclick="document.getElementById('fade3').classList.toggle('hide'),playAudio('audio3'),makeSelectedImageBig(this)">
+				</a>
+			</div>
 
-		  <div class="swiper-slide">
-			<a class="thumbTile">
-				<img class="circular--landscape"id="RF4" src="img/rf 4 cuad_00000.png" onclick="document.getElementById('fade4').classList.toggle('hide'),togglePlay(4)">
-			</a>
-		  </div>
-		  
-		  <div class="swiper-slide">
-			<a class="thumbTile">
-				<img class="circular--landscape"id="RF5" src="img/rf 1 x_00000.png" onclick="document.getElementById('fade5').classList.toggle('hide'),togglePlay(5)">
-			</a>
-		  </div>
+			<div class="swiper-slide">
+				<a class="thumbTile">
+					<img class="circular--landscape"id="RF4" src="img/rf 4 cuad_00000.png" onclick="document.getElementById('fade4').classList.toggle('hide'),playAudio('audio4'),makeSelectedImageBig(this)">
+				</a>
+			</div>
+			
+			<div class="swiper-slide">
+				<a class="thumbTile">
+					<img class="circular--landscape"id="RF5" src="img/rf 1 x_00000.png" onclick="document.getElementById('fade5').classList.toggle('hide'),playAudio('audio5'),makeSelectedImageBig(this)">
+				</a>
+			</div>
 
-		  <div class="swiper-slide">
-			<a class="thumbTile">
-				<img>
-			</a>
-		  </div>
+			<div class="swiper-slide">
+				<a class="thumbTile">
+					<img>
+				</a>
+			</div>
 
+			</div>
 		</div>
-	  </div>
-	</section>
+		</section>
 
-</main>
+	</main>
+
+	<main>
+
+		<audio id="audio1" src="https://stream.zeno.fm/g36pbfmaewduv"></audio>
+		<audio id="audio2" src="https://stream.zeno.fm/dfrplsw5xpzvv"></audio>
+		<audio id="audio3" src="https://stream.zeno.fm/gzjdpqzocn3vv"></audio>
+		<audio id="audio4" src="https://stream.zeno.fm/qu0qppcfmqduv"></audio>
+		<audio id="audio5" src="https://stream.zeno.fm/lej5jcocfi8vv"></audio>
 
 
-<!-- HTML para mostrar la barra deslizante -->
-<input type="range" min="0" max="100" value="50" id="volume-control" />
+	</main>
+
+
+	<!-- HTML para mostrar la barra deslizante -->
 
 
 
-<p class="piedepagina">	
+	<p class="piedepagina">	
 	<br style="clear:both;"/>
 	<img style="width: 130px;" src="img/famed_white.png" alt="">
 	<br style="clear:both;"/>
 	<br style="clear:both;"/>
 	<br style="clear:both;"/>
 	</p>
+	
 	<script>
 		var mySwiper = new Swiper('.swiper-container', {
 		  // Optional parameters
@@ -172,7 +180,7 @@
 		  },
 		  breakpoints: {
 			// when window width is >= 640px
-			640: {
+			1000: {
 				spaceBetween: 5,
 			  slidesPerView: 5,
 			  slidesPerGroup: 5,

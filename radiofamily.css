@@ -1,6 +1,6 @@
 :root {
 	--rojo: #ffffff00;
-	--fondo: #0c0c0c;
+	--fondo: #f5f5f5;
 }
 
 body{
@@ -111,7 +111,7 @@ header nav a:hover {
 }
 
 .degradadologo {
-	background: linear-gradient(#000000c7 10%, #0c0c0c00 100%);
+	background: linear-gradient(#2D2C2D 10%, #2D2C2D 100%);
 	position:fixed;
 	height: 8%;
 	width: 100%;
@@ -325,6 +325,15 @@ header nav a:hover {
 	
 }
 
+.degradadoinferior {
+	background: linear-gradient(#000000 0%, #000000 100%);
+	position:fixed;
+	height: 10%;
+	width: 100%;
+	z-index:1;
+	bottom: 0;
+}
+
 
 
 .thumbTile__image {
@@ -457,6 +466,7 @@ opacity: 0%;
 
     }
 
+
 	.thumbTitle2 {
 		vertical-align: text-top;
 		font-size: 15px;
@@ -478,11 +488,7 @@ opacity: 0%;
 		font-size: 10px;
 		line-height: 13px;
 		font-weight: 100;
-	}
-
-
-	  
-	  
+	}  
 }
 
 .flex-container {
@@ -556,6 +562,8 @@ transition: 0.5s ease-in-out;
 .circular--landscape {
     margin-left: 50px;
 	margin-right: 50px;
+	justify-content: center;
+	align-items: center;
     scale: 0.8;
     text-align: right;
     transition: 0.2s ease-in-out;
@@ -587,6 +595,16 @@ transition: 0.5s ease-in-out;
   margin-bottom: 20px;
   justify-content: center;
   align-items: center;
+  height: 5px;
+  width: 300px;
+  background: #555;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+	#volume-control {
+		width: 100%;
+	  }
 }
 
   .square1 {
@@ -655,16 +673,60 @@ transition: 0.5s ease-in-out;
   }
   
   .square5 {
-	background:  linear-gradient(45deg, hsla(352, 96%, 45%, 1) 0%, hsla(352, 96%, 45%, 0) 70%),
-    linear-gradient(135deg, hsla(253, 95%, 42%, 1) 10%, hsla(253, 95%, 42%, 0) 80%),
-    linear-gradient(225deg, hsla(179, 91%, 45%, 1) 10%, hsla(179, 91%, 45%, 0) 80%),
-    linear-gradient(315deg, hsla(119, 96%, 49%, 1) 100%, hsla(119, 96%, 49%, 0) 70%);
 	position:fixed;
 	height: 100vh;
 	justify-content: top;
 	align-items: top;
-	position: fixed;
 	width: 100%;
 	z-index: -1;
+	
+
+
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background-size: 1800% 1800%;
+  
+  -webkit-animation: rainbow 18s ease infinite;
+  -z-animation: rainbow 18s ease infinite;
+  -o-animation: rainbow 18s ease infinite;
+	animation: rainbow 18s ease infinite;}
+  
+  @-webkit-keyframes rainbow {
+	  0%{background-position:0% 82%}
+	  50%{background-position:100% 19%}
+	  100%{background-position:0% 82%}
   }
+  @-moz-keyframes rainbow {
+	  0%{background-position:0% 82%}
+	  50%{background-position:100% 19%}
+	  100%{background-position:0% 82%}
+  }
+  @-o-keyframes rainbow {
+	  0%{background-position:0% 82%}
+	  50%{background-position:100% 19%}
+	  100%{background-position:0% 82%}
+  }
+  @keyframes rainbow { 
+	  0%{background-position:0% 82%}
+	  50%{background-position:100% 19%}
+	  100%{background-position:0% 82%}
+  }
+
+  
+  /* CSS */
+.square {
+	display: none; /* ocultamos todos los cuadrados al inicio */
+	width: 100px;
+	height: 100px;
+	background-color: lightblue;
+	text-align: center;
+	transition: all 0.5s ease-in-out; /* añadimos la transición */
+  }
+  
+	#image1 { 	opacity: 0;
+			  transition: opacity 1s; }
+	#image1.hide { opacity: 1; }
+  
+	#image2 { 	opacity: 0;
+	  transition: opacity 1s; }
+  #image2.hide { opacity: 1; }
   
