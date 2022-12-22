@@ -49,3 +49,49 @@ function makeSelectedImageBig(selectedImage) {
     lastSelectedImage = selectedImage;
   }
 }
+
+function cambiarColor(imagen) {
+  var cuadrado = document.getElementById("cuadrado");
+  if (imagen.id == "RF1") {
+    if (cuadrado.style.backgroundColor == "rgb(0, 122, 204)") {
+      setTimeout(function() {
+        cuadrado.style.backgroundColor = "#f5f5f5";
+      }, 1);
+    } else {
+      cuadrado.style.backgroundColor = "rgb(0, 122, 204)";
+    }
+  } else if (imagen.id == "RF2") {
+    if (cuadrado.style.backgroundColor == "rgb(17, 158, 95)") {
+      setTimeout(function() {
+        cuadrado.style.backgroundColor = "#f5f5f5";
+      }, 1);
+    } else {
+      cuadrado.style.backgroundColor = "rgb(17, 158, 95)";
+    } 
+  } else if (imagen.id == "RF3") {
+    if (cuadrado.style.backgroundColor == "rgb(145, 0, 24)") {
+      setTimeout(function() {
+        cuadrado.style.backgroundColor = "#f5f5f5";
+      }, 1);
+    } else {
+      cuadrado.style.backgroundColor = "rgb(145, 0, 24)";
+    }
+  } else if (imagen.id == "RF4") {
+  if (cuadrado.style.backgroundColor == "rgb(209, 131, 21)") {
+    setTimeout(function() {
+      cuadrado.style.backgroundColor = "#f5f5f5";
+    }, 1);
+  } else {
+    cuadrado.style.backgroundColor = "rgb(209, 131, 21)";
+  }
+  }
+  else if (imagen.id == "RF5") {
+  if (cuadrado.style.backgroundColor == "rgb(12, 12, 12)") {
+    setTimeout(function() {
+      cuadrado.style.backgroundColor = "#f5f5f5";
+    }, 1);
+  } else {
+    cuadrado.style.backgroundColor = "rgb(12, 12, 12)";
+  }
+}
+}

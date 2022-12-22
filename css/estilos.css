@@ -291,10 +291,40 @@ header nav a:hover {
 	position: relative;
 }
 
+.thumbTiles.swiper-container2 {
+    padding: 30% 4%;
+	position: absolute;
+	display: flex;
+
+}
+
+.image-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  }
+  
+  .image-container img {
+	margin: 10px;
+	width: 160px;
+	object-fit: cover;
+  }
+
+  @media screen and (min-width: 640px) {
+
+	.image-container img {
+		width: 220px;
+	  }
+
+
+}
 
 .thumbTile {
     width: 20%;
 }
+
+.swiper-wrapper2 {
+	flex-wrap: wrap;}
 
 .thumbTile__image {
     width: 100%;
