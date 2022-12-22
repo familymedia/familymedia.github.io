@@ -76,14 +76,12 @@
 	
 	</main>
 
+<div id="cuadrado"></div>
+
 
 	<main>
 
-	<div class="square1" id="fade1"></div>
-	<div class="square2" id="fade2"></div>
-	<div class="square3" id="fade3"></div>
-	<div class="square4" id="fade4"></div>
-	<div class="square5" id="fade5"></div>
+
  <br>
  <br>
  <br>
@@ -99,32 +97,32 @@
 
 			<div class="swiper-slide">
 				<a class="thumbTile">
-					<img class="circular--landscape" id="RF1" src="img/rf 1 cuad_00000.png" onclick="document.getElementById('fade1').classList.toggle('hide'),playAudio('audio1'),makeSelectedImageBig(this)">
+					<img class="circular--landscape" id="RF1" src="img/rf 1 cuad_00000.png" onclick="playAudio('audio1'),makeSelectedImageBig(this),cambiarColor(this)">
 				</a>
 			</div>
 
 			<div class="swiper-slide">
 				<a class="thumbTile">
-					<img class="circular--landscape"id="RF2" src="img/rf 2 cuad_00000.png" onclick="document.getElementById('fade2').classList.toggle('hide'),playAudio('audio2'),makeSelectedImageBig(this)">
+					<img class="circular--landscape"id="RF2" src="img/rf 2 cuad_00000.png" onclick="playAudio('audio2'),makeSelectedImageBig(this),cambiarColor(this)">
 				</a>
 			</div>
 
 			
 			<div class="swiper-slide">
 				<a class="thumbTile">
-					<img class="circular--landscape"id="RF3" src="img/rf 3 cuad_00000.png" onclick="document.getElementById('fade3').classList.toggle('hide'),playAudio('audio3'),makeSelectedImageBig(this)">
+					<img class="circular--landscape"id="RF3" src="img/rf 3 cuad_00000.png" onclick="playAudio('audio3'),makeSelectedImageBig(this),cambiarColor(this)">
 				</a>
 			</div>
 
 			<div class="swiper-slide">
 				<a class="thumbTile">
-					<img class="circular--landscape"id="RF4" src="img/rf 4 cuad_00000.png" onclick="document.getElementById('fade4').classList.toggle('hide'),playAudio('audio4'),makeSelectedImageBig(this)">
+					<img class="circular--landscape"id="RF4" src="img/rf 4 cuad_00000.png" onclick="playAudio('audio4'),makeSelectedImageBig(this,cambiarColor(this))">
 				</a>
 			</div>
 			
 			<div class="swiper-slide">
 				<a class="thumbTile">
-					<img class="circular--landscape"id="RF5" src="img/rf 1 x_00000.png" onclick="document.getElementById('fade5').classList.toggle('hide'),playAudio('audio5'),makeSelectedImageBig(this)">
+					<img class="circular--landscape"id="RF5" src="img/rf 1 x_00000.png" onclick="playAudio('audio5'),makeSelectedImageBig(this),cambiarColor(this)">
 				</a>
 			</div>
 
@@ -152,18 +150,7 @@
 	</main>
 
 
-	<!-- HTML para mostrar la barra deslizante -->
 
-
-
-	<p class="piedepagina">	
-	<br style="clear:both;"/>
-	<img style="width: 130px;" src="img/famed_white.png" alt="">
-	<br style="clear:both;"/>
-	<br style="clear:both;"/>
-	<br style="clear:both;"/>
-	</p>
-	
 	<script>
 		var mySwiper = new Swiper('.swiper-container', {
 		  // Optional parameters

@@ -288,7 +288,7 @@ header nav a:hover {
 
 .thumbTiles.swiper-container {
     padding: 0 0%;
-	margin: 0 20px;
+	margin: 0 0px;
 	position: relative;
 }
 
@@ -560,8 +560,8 @@ transition: 0.5s ease-in-out;
 
 
 .circular--landscape {
-    margin-left: 50px;
-	margin-right: 50px;
+    margin-left: 35px;
+	margin-right: 35px;
 	justify-content: center;
 	align-items: center;
     scale: 0.8;
@@ -607,71 +607,7 @@ transition: 0.5s ease-in-out;
 	  }
 }
 
-  .square1 {
-	background: radial-gradient(circle, #00a2ff, #00a2ff46);
-	position:fixed;
-	height: 100vh;
-	justify-content: top;
-	align-items: top;
-	position: fixed;
-	width: 100%;
-	z-index: -1;
-  }
-
-  #fade1 { 	opacity: 0;
-			transition: opacity 1s; }
-  #fade1.hide { opacity: 1; }
-
-  #fade2 { 	opacity: 0;
-	transition: opacity 1s; }
-#fade2.hide { opacity: 1; }
-
-#fade3 { 	opacity: 0;
-	transition: opacity 1s; }
-#fade3.hide { opacity: 1; }
-
-#fade4 { 	opacity: 0;
-	transition: opacity 1s; }
-#fade4.hide { opacity: 1; }
-
-#fade5 { 	opacity: 0;
-	transition: opacity 1s; }
-#fade5.hide { opacity: 1; }
-
-  
-  .square2 {
-	background: radial-gradient(circle, #00ff88, #00ff8850);
-	position:fixed;
-	height: 100vh;
-	justify-content: top;
-	align-items: top;
-	position: fixed;
-	width: 100%;
-	z-index: -1;
-  }
-  
-  .square3 {
-	background: radial-gradient(circle, #ff002b, #ff002b50);
-	position:fixed;
-	height: 100vh;
-	justify-content: top;
-	align-items: top;
-	position: fixed;
-	width: 100%;
-	z-index: -1;
-  }
-  
-  .square4 {
-	background: radial-gradient(circle, #ff9100, #ff910050);
-	position:fixed;
-	height: 100vh;
-	justify-content: top;
-	align-items: top;
-	position: fixed;
-	width: 100%;
-	z-index: -1;
-  }
-  
+ 
   .square5 {
 	position:fixed;
 	height: 100vh;
@@ -712,21 +648,15 @@ transition: 0.5s ease-in-out;
   }
 
   
-  /* CSS */
-.square {
-	display: none; /* ocultamos todos los cuadrados al inicio */
-	width: 100px;
-	height: 100px;
-	background-color: lightblue;
-	text-align: center;
-	transition: all 0.5s ease-in-out; /* añadimos la transición */
+  #cuadrado {
+	background-color: #f5f5f5;
+	transition: background-color 0.5s;
+	position:fixed;
+	height: 100vh;
+	justify-content: top;
+	align-items: top;
+	width: 100%;
+	z-index: -1;
   }
   
-	#image1 { 	opacity: 0;
-			  transition: opacity 1s; }
-	#image1.hide { opacity: 1; }
-  
-	#image2 { 	opacity: 0;
-	  transition: opacity 1s; }
-  #image2.hide { opacity: 1; }
   
