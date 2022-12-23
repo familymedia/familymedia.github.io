@@ -29,26 +29,6 @@ function stopAudio() {
   }
 }
 
-// Declarar una variable global para almacenar la última imagen seleccionada
-var lastSelectedImage = null;
-
-function makeSelectedImageBig(selectedImage) {
-  // Si la imagen ya está grande, hacerla pequeña
-  if (selectedImage.style.height === "300px", selectedImage.style.width = "300px") {
-    selectedImage.style.scale = "200px", selectedImage.style.width = "200px";
-  } else {
-    // Si hay una imagen seleccionada anteriormente, hacerla pequeña
-    if (lastSelectedImage) {
-      lastSelectedImage.style.height = "200px", selectedImage.style.width = "200px";
-    }
-    
-    // Hacer grande la imagen seleccionada actualmente
-    selectedImage.style.height = "300px", selectedImage.style.width = "300px";
-    
-    // Actualizar la última imagen seleccionada
-    lastSelectedImage = selectedImage;
-  }
-}
 
 function cambiarColor(imagen) {
   var cuadrado = document.getElementById("cuadrado");
@@ -95,3 +75,4 @@ function cambiarColor(imagen) {
   }
 }
 }
+

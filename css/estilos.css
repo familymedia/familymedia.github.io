@@ -28,13 +28,13 @@ body {
 
 
 .contenedornav {
-	width: 97%;
+	width: 100%;
 	margin: auto;
 	color: #d2d2d2;
-	text-align: right;
+	text-align: left;
 	z-index: 10001 ;
 	position:fixed;
-	padding-top: 15px;
+margin-top: 10px;
 }
 
 header {
@@ -111,12 +111,23 @@ header nav a:hover {
 }
 
 .degradadologo {
-	background: linear-gradient(#000000c7 10%, #0c0c0c00 100%);
+	background: linear-gradient(#000000c7 10%, #00000027 100%);
 	position:fixed;
-	height: 8%;
+	height: 50px;
 	width: 100%;
 	z-index:10000;
 	top: 0;
+}
+
+.logoweb {
+width: 101px; 
+margin-left: 60px;
+}
+
+@media screen and (max-width: 640px) {
+	.logoweb {
+		margin-left: 20px;
+		}
 }
 
 .logopresentacion {
@@ -578,6 +589,40 @@ transition: 0.5s ease-in-out;
 	background-color: #000000;
   }
 
+  .dropdown {
+	position: relative;
+	display: inline-block;
+  }
 
+  .dropdownlargo {
+	position: relative;
+	display: inline-block;
+  }
   
+  .dropdown-content {
+	margin-top: 13px;
+	display: none;
+	position: absolute;
+	text-align: left;
+	background-color: #00000048;
+	padding: 5px;
+	z-index: 1;
+	
+  }
+  
+  .dropdown:hover .dropdown-content {
+	display: block;
+  }
 
+  @media screen and (min-width: 640px) {
+	.dropdown {
+		display: none;
+	  }
+}
+
+@media screen and (max-width: 640px) {
+	.dropdownlargo {
+		display: none;
+	  }
+}
+  
