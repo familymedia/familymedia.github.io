@@ -28,7 +28,7 @@
 	
 <body>
 
-	<div class="loader" id="carga"></div>
+	<div class="loader" id="carga"><span class="loader2"></span>	</div>
 	<script>window.onload=function(){
 	var loader = document.getElementById("carga");
 
@@ -52,29 +52,33 @@
 </main>
 
 
-<main>
-	<div class="degradadologo">
-		<div class="contenedor">
-			<h3 class="titulo"></h3>
-			<p class="descripcion">
-				<a href="index.html"> <img src="img/family max web_00000.png"  alt="familymèdia" width="101"></a>
+<header>
 
-			</p>
-		</div>
+	<div class="degradadologo"></div>
+	<div class="contenedornav">
+
+		<nav >
+			<a href="index.html"   > <img src="img/family max web_00000.png"  alt="familymèdia" class="logoweb"></a>
+
+			<div class="dropdownlargo">
+			<a href="index.html" >Inici</a>
+			<a href="Programes.html" class="activo">Programes</a>
+			<a href="Originals.html" >Originals</a>
+			<a href="radiofamily.html">Radio</a>
+			</div>
+
+			<div class="dropdown">
+				<a>▸Inici</a><br>
+				<div class="dropdown-content">
+					<a href="Programes.html" >Programes</a><br>
+					<a href="Originals.html">Originals</a><br>
+					<a href="radiofamily.html">Radio</a>
+
+				</div>
+			  </div>
+		</nav>
 	</div>
-
-	<header>
-		<div class="contenedornav">
-
-			<nav>
-				<a href="index.html">Inici</a>
-				<a href="Programes.html">Programes</a>
-				<a href="originals.html" class="activo">Originals</a>
-				<a href="radiofamily.html">Radio</a>
-				
-			</nav>
-		</div>
-	</header>
+</header>
 	
 </main>
 

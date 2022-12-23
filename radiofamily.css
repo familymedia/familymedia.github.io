@@ -20,21 +20,19 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-.contenedor {
-	width: 90%;
-	margin: auto;
-}
+
 
 
 
 .contenedornav {
-	width: 97%;
+	width: 100%;
 	margin: auto;
 	color: #d2d2d2;
-	text-align: right;
+	text-align: left;
 	z-index: 10001 ;
 	position:fixed;
-	padding-top: 15px;
+margin-top: 10px;
+	
 }
 
 header {
@@ -113,11 +111,13 @@ header nav a:hover {
 .degradadologo {
 	background: linear-gradient(#2D2C2D 10%, #2D2C2D 100%);
 	position:fixed;
-	height: 8%;
+	height: 50px;
 	width: 100%;
 	z-index:10000;
 	top: 0;
 }
+
+
 
 .logopresentacion {
 
@@ -526,7 +526,7 @@ transition: 0.5s ease-in-out;
 	border-radius: 50%;
 	display: inline-block;
 	position: relative;
-	background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 33%, #ffffff 100%);
+	background: linear-gradient(0deg, #ff002b, #00aeff , #00ff9d , #ff9900 );
 	box-sizing: border-box;
 	animation: rotation 1s linear infinite;
 	
@@ -541,7 +541,7 @@ transition: 0.5s ease-in-out;
 	width: 44px;
 	height: 44px;
 	border-radius: 50%;
-	background: rgb(32, 32, 32)
+	background: #f5f5f5;
   }
   @keyframes rotation {
 	0% { transform: rotate(0deg) }
@@ -587,25 +587,7 @@ transition: 0.5s ease-in-out;
   }
 
   /* CSS para estilizar la barra deslizante */
-#volume-control {
-  width: 20%;
-  display: block;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  justify-content: center;
-  align-items: center;
-  height: 5px;
-  width: 300px;
-  background: #555;
-  border-radius: 15px;
-}
 
-@media screen and (max-width: 1000px) {
-	#volume-control {
-		width: 100%;
-	  }
-}
 
  
   .square5 {
@@ -659,4 +641,79 @@ transition: 0.5s ease-in-out;
 	z-index: -1;
   }
   
+  .dropdown {
+	position: relative;
+	display: inline-block;
+  }
+
+  .dropdownlargo {
+	position: relative;
+	display: inline-block;
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	text-align: right;
+	background-color: #000000a1;
+	padding: 7px;
+	z-index: 1;
+	
+  }
+  
+  .dropdown:hover .dropdown-content {
+	display: block;
+  }
+
+  @media screen and (min-width: 640px) {
+	.dropdown {
+		display: none;
+	  }
+}
+
+@media screen and (max-width: 640px) {
+	.dropdownlargo {
+		display: none;
+	  }
+}
+
+.range {
+	background-color: #a9acb1;
+  }
+  .range-quantity {
+	background-color: #8077a7;
+  }
+  .range-handle {
+	background-color: #8077a7;
+	border-radius: 100%;
+	cursor: move;
+	height: 30px;
+	left: 0;
+	top: -13px;
+	position: absolute;
+	width: 30px;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  #volume-control {
+	width: 20%;
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	justify-content: center;
+	align-items: center;
+	height: 5px;
+	width: 300px;
+	background: #555;
+	border-radius: 15px;
+  }
+  
+  @media screen and (max-width: 1000px) {
+	  #volume-control {
+		  width: 100%;
+		}
+  }
+
   
