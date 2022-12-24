@@ -9,6 +9,16 @@ body{
  }
 
 
+  body {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Standard syntax */
+  }
+
+
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -106,17 +116,28 @@ header nav a:hover {
 	position:fixed;
 	height: 10%;
 	width: 100%;
-	z-index:1;
+	z-index:100;
 	bottom: 0;
 }
 
-.degradadologo {
-	background: linear-gradient(#000000c7 10%, #00000027 100%);
+.navbar {
+	background: linear-gradient(#0000008c 10%, #00000000 100%);
 	position:fixed;
 	height: 50px;
 	width: 100%;
 	z-index:10000;
 	top: 0;
+  transition: all 0.6s ease-out;
+}
+
+.navbar.scrolled {
+	position:fixed;
+	height: 50px;
+	width: 100%;
+	z-index:10000;
+	top: 0;
+  background: black;
+  opacity: 0.5;
 }
 
 .logoweb {
@@ -365,6 +386,12 @@ margin-left: 60px;
 	
 }
 
+@media screen and (max-width: 640px) {
+	.thumbTile__image:hover {
+		transform: scale(1);
+	  }
+}
+
 
 
 .thumbTile__image {
@@ -372,6 +399,8 @@ margin-left: 60px;
 	transition: 250ms all;
 	border-radius: var(--tileBorderRadius);
   }
+
+
 
   .thumbTile__image_desc {
 	position: relative;
@@ -497,6 +526,8 @@ opacity: 0%;
 
     }
 
+	
+
 	.thumbTitle2 {
 		vertical-align: text-top;
 		font-size: 15px;
@@ -591,7 +622,8 @@ transition: 0.5s ease-in-out;
 
   .dropdown {
 	position: relative;
-	display: inline-block;
+	float: right;
+	margin-top: 1.5px;
   }
 
   .dropdownlargo {
@@ -600,13 +632,14 @@ transition: 0.5s ease-in-out;
   }
   
   .dropdown-content {
-	margin-top: 13px;
 	display: none;
 	position: absolute;
 	text-align: left;
 	background-color: #00000048;
 	padding: 5px;
 	z-index: 1;
+	transition: 0.5s ease-in-out;
+
 	
   }
   
