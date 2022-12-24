@@ -54,22 +54,23 @@
 
 <header>
 
-	<div class="degradadologo"></div>
+	<div class="navbar"></div>
 	<div class="contenedornav">
 
 		<nav >
 			<a href="index.html"   > <img src="img/family max web_00000.png"  alt="familymèdia" class="logoweb"></a>
 
 			<div class="dropdownlargo">
-			<a href="index.html" >Inici</a>
+			<a href="index.html" class="activo">Inici</a>
 			<a href="Programes.html" >Programes</a>
-			<a href="Originals.html" class="activo">Originals</a>
+			<a href="Originals.html">Originals</a>
 			<a href="radiofamily.html">Radio</a>
 			</div>
 
 			<div class="dropdown">
-				<a>▸Inici</a><br>
+				<a class="dropdown">Categories</a><br>
 				<div class="dropdown-content">
+					<a href="index.html" >Inici</a><br>
 					<a href="Programes.html" >Programes</a><br>
 					<a href="Originals.html">Originals</a><br>
 					<a href="radiofamily.html">Radio</a>
@@ -78,6 +79,26 @@
 			  </div>
 		</nav>
 	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		function checkScroll(){
+  var startY = $('.navbar').height() * 2; //The point where the navbar changes in px
+
+  if($(window).scrollTop() > startY){
+      $('.navbar').addClass("scrolled");
+  }else{
+      $('.navbar').removeClass("scrolled");
+  }
+}
+
+if($('.navbar').length > 0){
+  $(window).on("scroll load resize", function(){
+      checkScroll();
+  });
+}
+	</script>
+
 </header>
 	
 </main>

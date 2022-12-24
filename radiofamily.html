@@ -51,50 +51,66 @@
 	</div>
 </main>
 
+<main>
+	<div class="degradadodere"></div>
+</main>
 
 
 
-	<header>
 
-		<nav class="degradadologo"></nav>
-		<div class="contenedornav">
+<header>
 
-			<nav >
-				<a href="index.html"> <img src="img/family max web_00000.png"  alt="familymèdia" style=" width: 101px; margin-left: 20px;" ></a>
+	<div class="navbar"></div>
+	<div class="contenedornav">
 
-				<div class="dropdownlargo">
-				<a href="index.html" >Inici</a>
-				<a href="Programes.html" >Programes</a>
-				<a href="Originals.html">Originals</a>
-				<a href="radiofamily.html" class="activo">Radio</a>
+		<nav >
+			<a href="index.html"   > <img src="img/family max web_00000.png"  alt="familymèdia" class="logoweb"></a>
+
+			<div class="dropdownlargo">
+			<a href="index.html" class="activo">Inici</a>
+			<a href="Programes.html" >Programes</a>
+			<a href="Originals.html">Originals</a>
+			<a href="radiofamily.html">Radio</a>
+			</div>
+
+			<div class="dropdown">
+				<a class="dropdown">Categories</a><br>
+				<div class="dropdown-content">
+					<a href="index.html" >Inici</a><br>
+					<a href="Programes.html" >Programes</a><br>
+					<a href="Originals.html">Originals</a><br>
+					<a href="radiofamily.html">Radio</a>
+
 				</div>
+			  </div>
+		</nav>
+	</div>
 
-				<div class="dropdown">
-					<a href="index.html" >▸Inici</a><br>
-					<div class="dropdown-content">
-						<a href="Programes.html" >Programes</a><br>
-						<a href="Originals.html">Originals</a><br>
-						<a href="radiofamily.html">Radio</a>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		function checkScroll(){
+  var startY = $('.navbar').height() * 2; //The point where the navbar changes in px
 
-					</div>
-				  </div>
-			</nav>
-		</div>
-	</header>
+  if($(window).scrollTop() > startY){
+      $('.navbar').addClass("scrolled");
+  }else{
+      $('.navbar').removeClass("scrolled");
+  }
+}
+
+if($('.navbar').length > 0){
+  $(window).on("scroll load resize", function(){
+      checkScroll();
+  });
+}
+	</script>
+
+</header>
 	
-	</main>	  
+
 
 <div id="cuadrado"></div>
 
-	<main>
-
-
- <br>
- <br>
- <br>
-
-  <br>
-  <br>
   <br>
 		<section class="thumbSection" >
 		<div class="thumbTiles swiper-container">
@@ -104,32 +120,32 @@
 
 			<div class="swiper-slide">
 				<a class="thumbTile">
-					<img class="circular--landscape" id="RF1" src="img/rf 1 cuad_00000.png" onclick="playAudio('audio1'),makeSelectedImageBig(this),cambiarColor(this)">
+					<img class="circular--landscape" id="RF1" src="img/web radio1_00000.png" onclick="playAudio('audio1'),cambiarColor(this)">
 				</a>
 			</div>
 
 			<div class="swiper-slide">
 				<a class="thumbTile">
-					<img class="circular--landscape"id="RF2" src="img/rf 2 cuad_00000.png" onclick="playAudio('audio2'),makeSelectedImageBig(this),cambiarColor(this)">
+					<img class="circular--landscape"id="RF2" src="img/web radio 2_00000.png" onclick="playAudio('audio2'),cambiarColor(this)">
 				</a>
 			</div>
 
 			
 			<div class="swiper-slide">
 				<a class="thumbTile">
-					<img class="circular--landscape"id="RF3" src="img/rf 3 cuad_00000.png" onclick="playAudio('audio3'),makeSelectedImageBig(this),cambiarColor(this)">
+					<img class="circular--landscape"id="RF3" src="img/web radio 3_00000.png" onclick="playAudio('audio3'),cambiarColor(this)">
 				</a>
 			</div>
 
 			<div class="swiper-slide">
 				<a class="thumbTile">
-					<img class="circular--landscape"id="RF4" src="img/rf 4 cuad_00000.png" onclick="playAudio('audio4'),makeSelectedImageBig(this,cambiarColor(this))">
+					<img class="circular--landscape"id="RF4" src="img/web radio 4_00000.png" onclick="playAudio('audio4'),cambiarColor(this)">
 				</a>
 			</div>
 			
 			<div class="swiper-slide">
 				<a class="thumbTile">
-					<img class="circular--landscape"id="RF5" src="img/rf 1 x_00000.png" onclick="playAudio('audio5'),makeSelectedImageBig(this),cambiarColor(this)">
+					<img class="circular--landscape"id="RF5" src="img/web radio 5_00000.png" onclick="playAudio('audio5'),cambiarColor(this)">
 				</a>
 			</div>
 
@@ -161,7 +177,7 @@
 	<script>
 		var mySwiper = new Swiper('.swiper-container', {
 		  // Optional parameters
-		  spaceBetween: 50,
+		  spaceBetween: 160,
 		  slidesPerView: 2,
 		  loop: false,
 		  freeMode: true,
