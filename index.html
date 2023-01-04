@@ -100,28 +100,52 @@ if($('.navbar').length > 0){
 
 </header>
 
-</main>
 
-	<main>
-		<div style="background: linear-gradient(180deg,#0d0d0d00 0%, #0d0d0d 100%), url(img/JOCSESTIUFOTO.png);
-			background-position: center center; background-size: cover; " class="pelicula-principal">
-			<div class="contenedor">
-			<img style="margin-top: 40px;" class="headerprincipal" src="img/tvf esports web_00000.png"><br>
+</main>
+<style>
+	.pelicula-principal {
+	  position: relative; /* Make sure the container element is positioned relatively */
+	}
+  
+	#myVideo {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+}
+
+  
+	.contenedor {
+	  position: relative; /* Position the content container element relatively */
+	  z-index: 1; /* Set the z-index to a positive value */
+	}
+	
+  </style>
+  
+  <div class="pelicula-principal">
+	<video autoplay muted loop id="myVideo">
+	  <source src="vid/10s WEB Jocs d'estiu.mp4" type="video/mp4">
+	</video>
+	<div class="contenedor">
+		<img style="margin-top: 40px;" class="headerprincipal" src="img/tvf esports web_00000.png"><br>
 
 			<img class="logopresentacion" src="img/portada web jocs destiu_00000.png">
 				<p class="descripcion">
 					Cada estiu es celebren els jocs d'estiu, en aquests vídeos disfrutareu els moments més graciosos i musicals dels jocs.</p>
 				
 				<button role="button" class="boton" ><i class="fas fa-play"></i><a href="Jocsdestiu.html" class="">Vore ara</a> </button> 
-				
-
-		</div>
-	</main>
+	  <!-- Your content goes here -->
+	</div>
+  </div>
+  
 <p></p>
 
 	<main>
 		
-		<section class="thumbSection">
+		<section style="padding-top: 0%;" class="thumbSection">
 		  <h4 class="thumbTitle">Més destacat</h4>
 		  <div class="thumbTiles swiper-container">
 			<!-- Additional required wrapper -->
