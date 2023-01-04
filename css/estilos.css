@@ -99,9 +99,10 @@ header nav a:hover {
 .logo-familymax {
 	padding: 10px 0;
 }
+
 .pelicula-principal {
 	font-size: 16px;
-	min-height: 30em;
+	min-height: 34em;
 	color: #fff;
 	background: linear-gradient(#0d0d0d00 0%, #0d0d0d 100%), url(img/fondonegro_00000.png);
 	background-position: center center;
