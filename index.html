@@ -117,6 +117,28 @@ if($('.navbar').length > 0){
   object-fit: cover;
 }
 
+#myfoto {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+	#myVideo {
+        display: none;
+}
+}
+
+@media screen and (min-width: 600px) {
+	#myfoto {
+        display: none;
+}
+}
+
   
 	.contenedor {
 	  position: relative; /* Position the content container element relatively */
@@ -129,6 +151,8 @@ if($('.navbar').length > 0){
 	<video autoplay muted loop id="myVideo">
 	  <source src="vid/10s WEB Jocs d'estiu.mp4" type="video/mp4">
 	</video>
+	<img id="myfoto" src="img/JOCSESTIUFOTO.png">
+
 	<div class="contenedor">
 		<img style="margin-top: 40px;" class="headerprincipal" src="img/tvf esports web_00000.png"><br>
 
